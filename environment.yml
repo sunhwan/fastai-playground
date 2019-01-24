@@ -1,4 +1,9 @@
 name: fastai
+channels:
+  - pytorch
+  - fastai
 dependencies:
+  - flask
+  - fastai
   - pip:
-    - fastai
+      - flask-bootstrap4
