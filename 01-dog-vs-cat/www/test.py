@@ -2,6 +2,9 @@ import torch
 import pickle
 from fastai.vision import *
 
+import warnings
+warnings.filterwarnings("ignore", category=torch.serialization.SourceChangeWarning)
+
 def predict(filename):
     torch.load(open('data/export.pkl', 'rb'), map_location='cpu')
     learn = load_learner('./data', cpu=True)
