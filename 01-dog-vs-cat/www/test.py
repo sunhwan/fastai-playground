@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore", category=torch.serialization.SourceChangeWarni
 
 def predict(filename):
     torch.load(open('data/export.pkl', 'rb'), map_location='cpu')
-    learn = load_learner('./data', cpu=True)
+    learn = load_learner('./data')
     img = open_image(filename)
     preds = learn.predict(img)
     return preds

@@ -27,6 +27,11 @@ html {
 .custom-file-control.selected:lang(en)::after {
   content: "" !important;
 }
+
+img.Image{
+  display: inline-block;
+  max-width: 100%;
+}
 </style>
 {% endblock %}
 
@@ -48,7 +53,12 @@ html {
 {% block content %}
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Dog-Vs-Cat</h1>
-      <!--<p class="lead"></p>-->
+      <p class="lead">
+      {% if preds %}
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" class="Image">
+	It's <b>{{ preds[0] }}</b>!!
+      {% endif %}
+      </p>
     </div>
 
     <div class="container">
