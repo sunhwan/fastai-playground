@@ -1,0 +1,14 @@
+name: fastai
+channels:
+  - anaconda
+  - pytorch
+  - fastai
+dependencies:
+  - python=3.7
+  - flask
+  - pytorch-cpu
+  - torchvision
+  - fastai
+  - pip:
+    - flask-bootstrap4
+
