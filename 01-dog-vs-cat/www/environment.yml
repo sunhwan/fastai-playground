@@ -9,6 +9,7 @@ dependencies:
   - pytorch-cpu
   - torchvision
   - fastai
+  - gunicorn
   - pip:
     - flask-bootstrap4
 
