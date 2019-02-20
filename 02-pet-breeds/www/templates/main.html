@@ -52,11 +52,11 @@ img.Image{
 
 {% block content %}
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Dog-Vs-Cat</h1>
+      <h1 class="display-4">Dog and Cat Breed</h1>
       <p class="lead">
       {% if preds %}
         <img src="{{ url_for('uploaded_file', filename=filename) }}" class="Image">
-	It's <b>{{ preds[0] }}</b>!!
+	<p>It's <b>{{ preds[0] }}</b>!!</p>
       {% endif %}
       </p>
     </div>
